@@ -8,6 +8,8 @@ import allReducers from './reducers';
 import './styles/main.css';
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import thunk from 'redux-thunk';
+import ParticlesBG from './components/parcticlesBG/ParticlesBG'
+import {PARTICLES_SETTING} from './constants/index'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(allReducers, composeEnhancers(applyMiddleware(thunk)));
@@ -15,6 +17,7 @@ const store = createStore(allReducers, composeEnhancers(applyMiddleware(thunk)))
 render(
     <Provider store={store}>
         <div>
+            <ParticlesBG settings={PARTICLES_SETTING}/>
             <Router>
                 {/*<Route exact path='/' component={Main}/>*/}
                 <Route exact path='/' component={IpTv}/>

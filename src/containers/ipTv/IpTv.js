@@ -72,10 +72,10 @@ class IpTv extends Component {
                     <div className='listChanel'>
                         {Object.keys(this.state.groupChanel).map((gr, i) => {
                             return (
-                                <Collapsible trigger={gr} open={true}>
+                                <Collapsible key={'colaps' + i} trigger={gr} open={true}>
                                     {this.state.groupChanel[gr].map((item, i) => {
                                         var linkToIcon = './' + item.inf.title + '.png'
-                                        return <div key={i} className='itemChenel'
+                                        return <div key={'group' + i} className='itemChenel'
                                                     onClick={() => this.selectCH(item)}>
                                             <img src={files[linkToIcon] ? files[linkToIcon] : files['./none.png']} alt=''
                                                  className='iconChanel'/>
