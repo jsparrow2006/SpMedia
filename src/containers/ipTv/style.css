@@ -16,6 +16,10 @@
     color: lightcyan;
 }
 
+body {
+    background-color: black;
+}
+
 .mainContainer {
     background-color: black;
     height: 100vh;

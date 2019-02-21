@@ -19,8 +19,8 @@ render(
         <div>
             <ParticlesBG settings={PARTICLES_SETTING}/>
             <Router>
-                {/*<Route exact path='/' component={Main}/>*/}
-                <Route exact path='/' component={IpTv}/>
+                <Route exact path='/' component={Main}/>
+                {/*<Route exact path='/' component={IpTv}/>*/}
             </Router>
         </div>
     </Provider>,
